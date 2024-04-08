@@ -1,0 +1,75 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                    Goat_01.jpg  label:                       goat
+ 2 key:                     Dog_01.jpg  label:                        dog
+ 3 key:          computer_mouse_01.jpg  label:             computer mouse
+ 4 key:                     Dog_02.jpg  label:                        dog
+
+     MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+         computer_mouse_01.jpg: 
+Real:             computer mouse   Classifier:          mouse, computer mouse
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+ NOT A MATCH:
+
+                   Goat_01.jpg: 
+Real:                       goat   Classifier:             labrador retriever
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+         computer_mouse_01.jpg: 
+Real:             computer mouse   Classifier:          mouse, computer mouse  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                   Goat_01.jpg: 
+Real:                       goat   Classifier:             labrador retriever  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match           : 75.000000%
+pct_correct_dogs    : 100.000000%
+pct_correct_breed   : 100.000000%
+pct_correct_notdogs : 50.000000%
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                       goat   Classifier:             labrador retriever
+
+** Total Elapsed Runtime: 0:0:9
